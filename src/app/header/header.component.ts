@@ -33,5 +33,8 @@ export class HeaderComponent implements OnInit {
   public isUser() {
     return this.userAuthService.isUser();
   }
+  public isDeliveryPerson() {
+    return this.userAuthService.isDeliveryPerson();
+  }
 
 }

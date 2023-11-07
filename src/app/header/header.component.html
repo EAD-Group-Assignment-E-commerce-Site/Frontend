@@ -35,7 +35,7 @@
     <span style="color: white">Home</span></button
   >&nbsp;
   <button
-    *ngIf="!isAdmin()"
+    *ngIf="isUser()"
     mat-raised-button
     style="background-color: white"
     routerLink="/cart"
@@ -43,7 +43,7 @@
     <span style="color: #590577">Cart</span></button
   >&nbsp;
   <button
-    *ngIf="!isAdmin()"
+    *ngIf="isUser()"
     mat-raised-button
     style="background-color: white"
     routerLink="/myOrders"
@@ -73,5 +73,14 @@
     routerLink="/orderInformation"
   >
     <span style="color: #590577">Order Information</span>
+  </button>
+
+  <button
+          *ngIf="isDeliveryPerson()"
+          mat-raised-button
+          style="background-color: white"
+          routerLink="/orderInformation"
+  >
+    <span style="color: #590577">View Delivery</span>
   </button>
 </mat-toolbar>
