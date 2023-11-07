@@ -35,8 +35,14 @@ export class UserAuthService {
     return roles[0].roleName === 'Admin';
   }
 
+  // tslint:disable-next-line:typedef
   public isUser() {
     const roles: any[] = this.getRoles();
     return roles[0].roleName === 'User';
   }
+
+  public isDeliveryPerson() {
+       const roles: any[] = this.getRoles();
+       return roles[0].roleName === 'Delivery Person';
+    }
 }
