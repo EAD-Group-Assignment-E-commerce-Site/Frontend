@@ -17,6 +17,7 @@ import { ProductViewDetailsComponent } from "./product-view-details/product-view
 import { RegisterComponent } from "./register/register.component";
 import { ShowProductDetailsComponent } from "./show-product-details/show-product-details.component";
 import { UserComponent } from "./user/user.component";
+import { DeliveryPerosonComponent } from './delivery-peroson/delivery-peroson.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent, data: { title: "Home" } },
@@ -31,6 +32,12 @@ const routes: Routes = [
     component: UserComponent,
     canActivate: [AuthGuard],
     data: { roles: ["User"], title: "User" },
+  },
+  {
+    path: 'deliveryPerson',
+    component: DeliveryPerosonComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['Delivery Person'], title: 'Delivery Person' },
   },
   { path: "login", component: LoginComponent, data: { title: "Login" } },
   {

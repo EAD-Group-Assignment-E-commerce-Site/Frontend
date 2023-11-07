@@ -36,6 +36,7 @@ import { CartComponent } from './cart/cart.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { DeliveryPerosonComponent } from './delivery-peroson/delivery-peroson.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     RegisterComponent,
     CartComponent,
     MyOrdersComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    DeliveryPerosonComponent
   ],
   imports: [
     BrowserModule,
