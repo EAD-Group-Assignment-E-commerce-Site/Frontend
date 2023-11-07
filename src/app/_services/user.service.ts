@@ -37,6 +37,11 @@ export class UserService {
     });
   }
 
+  public forDelivery(){
+    return this.httpclient.get(this.PATH_OF_API + '/forDelivery', {
+      responseType: 'text',
+    });
+  }
   public roleMatch(allowedRoles): boolean {
     let isMatch = false;
     const userRoles: any = this.userAuthService.getRoles();
